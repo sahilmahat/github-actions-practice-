@@ -10,12 +10,14 @@ on:
 jobs:
   greet:
     runs-on: ubuntu-latest
+    env:
+      GREETING_NAME: Sahil
     steps:
       - name: Clone repository
         uses: actions/checkout@v4
 
       - name: Say Hello
-        run: echo "Hello form Github Actions"
+        run: echo "Hello, $GREETING_NAME form Github Actions"
 
 
       - name: list files
