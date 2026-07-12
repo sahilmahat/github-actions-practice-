@@ -25,3 +25,10 @@ jobs:
 
       - name: Use Secret
         run: echo "The secret value is ${{secrets.MY_SECRET_MESSAGE}}"
+
+  farewell:
+    needs: greet
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Goodbye
+        run: echo "Good bye form farewell job, which run after the greet finished"
