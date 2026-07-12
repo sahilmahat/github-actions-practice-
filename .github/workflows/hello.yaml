@@ -23,4 +23,5 @@ jobs:
       - name: list files
         run: ls -la
 
-
+      - name: Use Secret
+        run: echo "The secret value is ${{secrets.MY_SECRET_MESSAGE}}"
